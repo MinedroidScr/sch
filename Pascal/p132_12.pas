@@ -15,17 +15,22 @@ begin
     2: if (day>28) then err:=True; 
     else err:=True;
   end;
+  
   if (not err) then
-  for i := 1 to month do begin
-    case i of
-      1, 3, 5, 7, 8, 10, 12: curr:=31;
-      4, 6, 9, 11: curr:=30;
-      2: curr:=28; 
+  begin
+    for i := 1 to month do begin
+      case i of
+        1, 3, 5, 7, 8, 10, 12: curr:=31;
+        4, 6, 9, 11: curr:=30;
+        2: curr:=28; 
+      end;
+      if (i=month) then
+        summ:=summ+day
+      else
+        summ:=summ+curr;
     end;
-    if (i=month) then
-      summ:=summ+day
-    else
-      summ:=summ+curr;
-  end;
-  write(365-summ, ' days before New Year');
+    write(365-summ, ' days before New Year');
+  end
+  else
+    write('Error')
 end.
