@@ -4,6 +4,7 @@ var
 begin
   err := False;
   summ := 0;
+  i := 0;
   
   write('Enter day and month: ');
   read(day, month);
@@ -18,7 +19,7 @@ begin
   for i := 1 to month do begin
     case i of
       1, 3, 5, 7, 8, 10, 12: curr:=31;
-      4, 6, 9, 11: curr:=30; 
+      4, 6, 9, 11: curr:=30;
       2: curr:=28; 
     end;
     if (i=month) then
