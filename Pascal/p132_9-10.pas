@@ -4,7 +4,7 @@ begin
   write('Enter month: ');
   read(month);
   
-  { w/ using 'caas' operator }
+  { w/ using 'case' operator }
   if (month=1)or(month=2)or(month=12) then
     write('winter') //zima
   else if (month=3)or(month=4)or(month=5) then
