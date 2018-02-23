@@ -3,7 +3,7 @@ var
 begin
   a:=0; b:=0;
   read(a,b);
-  while(a<>0)or(b<>0) do begin
+  while(a>0)or(b>0) do begin
     if (a>b) then
       a:=a-b
     else if a=b then begin
